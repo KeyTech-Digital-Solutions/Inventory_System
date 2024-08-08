@@ -1,0 +1,15 @@
+{
+  "name": "inventory_system",
+  "version": "1.0.0",
+  "description": "MERN application that uses basic HTTP requests to allow users to view and update a basic inventory system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

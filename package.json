@@ -2,12 +2,15 @@
   "name": "inventory_system",
   "version": "1.0.0",
   "description": "MERN application that uses basic HTTP requests to allow users to view and update a basic inventory system.",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  }
 }

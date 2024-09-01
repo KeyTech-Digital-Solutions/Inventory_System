@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose=require("mongoose")
 
 //defines perameters for book model
 const productSchema = mongoose.Schema(
@@ -32,4 +32,4 @@ const productSchema = mongoose.Schema(
 );
 
 //exports book model
-export const Product = mongoose.model("Product", productSchema);
+module.exports = mongoose.model("Product", productSchema);

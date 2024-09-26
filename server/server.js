@@ -3,9 +3,8 @@ const express = require("express");
 const app = express();
 const PORT = 4000;
 const cors = require("cors");
-//const mongoDBURI = require("./config");
+const mongoDBURL = require("./config");
 const mongoose = require("mongoose");
-const mongoDBURI = process.env.MONGODBURL;
 const routes = require("./routes/productRoutes");
 
 app.use(express.urlencoded({ extended: true }));
@@ -18,7 +17,7 @@ app.get("/", cors(), async (req, res) => {
 
 app.use("/products", routes);
 
-mongoose.connect(mongoDBURI).then(() => {
+mongoose.connect(mongoDBURL).then(() => {
   console.log("App connected to database");
 });
 app.listen(PORT, () => {

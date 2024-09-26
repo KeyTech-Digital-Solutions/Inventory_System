@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Data = require('../models/Data');
 
+
 router.get('/', async (req, res) => {
   try {
     const data = await Data.find(); 
@@ -12,8 +13,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// POST
 
+// POST
 router.post('/products', (req, res) => {
   const { name, productCode } = req.body;
 
@@ -30,6 +31,7 @@ router.post('/products', (req, res) => {
 
   res.status(201).json({ message: 'Data received', data: { name, productCode } });
 });
+
 
 // DELETE
 router.delete('/:id', async (req, res) => {

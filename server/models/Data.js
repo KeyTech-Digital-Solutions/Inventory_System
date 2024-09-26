@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 //defines perameters for book model
 const productSchema = mongoose.Schema(
@@ -9,27 +9,27 @@ const productSchema = mongoose.Schema(
     },
     productCode: {
       type: String,
-      required: true,
+      required: false,
     },
     cost: {
       type: String,
-      required: true,
+      required: false,
     },
     price: {
       type: String,
-      required: true,
+      required: false,
     },
     quantity: {
       type: Number,
-      required: true,
+      required: false,
     },
     imageLink: {
       type: String,
-      required: true,
+      required: false,
     },
   },
   { timeStamps: true }
 );
 
 //exports book model
-export const Product = mongoose.model("Product", productSchema);
+module.exports = mongoose.model("Data", productSchema);
